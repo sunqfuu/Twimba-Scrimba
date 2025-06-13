@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS -->
     <link rel="stylesheet" href="index.css" />
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -10,6 +11,14 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&display=swap"
       rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <title>Twimba</title>
   </head>
@@ -19,14 +28,13 @@
     </header>
     <main>
       <div class="tweet-input-area">
-        <img src="images/sunqfu.png" class="profile-pic" />
-        <textarea
-          id="tweet-input"
-          placeholder="What's happening?"
-          maxlength="280"></textarea>
+        <img src="images/scrimbalogo.png" class="profile-pic" />
+        <textarea placeholder="What's happening?" id="tweet-input"></textarea>
       </div>
       <button id="tweet-btn">Tweet</button>
-      <div class="feed" id="feed"></div>
+      <div class="feed" id="feed">
+        <!-- Tweets here!! -->
+      </div>
     </main>
     <script src="index.js" type="module"></script>
   </body>
