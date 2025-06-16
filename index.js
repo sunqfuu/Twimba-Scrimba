@@ -47,6 +47,7 @@ function handleReplyClick(replyId) {
 
 function handleTweetBtnClick() {
   const tweetInput = document.getElementById("tweet-input");
+
   if (tweetInput.value) {
     tweetsData.unshift({
       handle: `@sunqfu`,

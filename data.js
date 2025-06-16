@@ -34,7 +34,7 @@ export const tweetsData = [
     uuid: "3c23454ee-c0f5-9g9g-9c4b-77835tgs2",
   },
   {
-    handle: `@VibeCoder`,
+    handle: `@Vibecoder`,
     profilePic: `images/vibecoder.png`,
     likes: 10,
     retweets: 3,
@@ -43,7 +43,7 @@ export const tweetsData = [
       {
         handle: `@StackOverflower ☣️`,
         profilePic: `images/overflow.png`,
-        tweetText: `No. Onviosuly not. Go get a job in McDonald's.`,
+        tweetText: `No. Obviosuly not. Go get a job in McDonald's.`,
       },
       {
         handle: `@YummyCoder64`,
