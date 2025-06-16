@@ -25,7 +25,6 @@ function handleLikeClick(tweetId) {
     targetTweetObj.likes++;
   }
   targetTweetObj.isLiked = !targetTweetObj.isLiked;
-
   render();
 }
 
@@ -33,6 +32,7 @@ function handleRetweetClick(tweetId) {
   const targetTweetObj = tweetsData.filter(function (tweet) {
     return tweet.uuid === tweetId;
   })[0];
+
   if (targetTweetObj.isRetweeted) {
     targetTweetObj.retweets--;
   } else {
@@ -46,6 +46,25 @@ function getFeedHtml() {
   let feedHtml = ``;
 
   tweetsData.forEach(function (tweet) {
+    let likeIconClass = "";
+
+    if (tweet.isLiked) {
+      likeIconClass = "liked";
+    }
+
+    let retweetIconClass = "";
+    if (tweet.isRetweeted) {
+      retweetIconClass = "retweeted";
+    }
+
+    /*
+Challenge:
+1. Use an if statement to set the value of 
+   'likeIconClass' to the string 'liked' 
+   if the tweet has been liked. 
+2. In the like icon tag, add 'likeIconClass' 
+   to the list of classes.
+*/
     feedHtml += `
 <div class="tweet">
     <div class="tweet-inner">
@@ -61,13 +80,13 @@ function getFeedHtml() {
                     ${tweet.replies.length}
                 </span>
                 <span class="tweet-detail">
-                    <i class="fa-solid fa-heart"
+                    <i class="fa-solid fa-heart ${likeIconClass}"
                     data-like="${tweet.uuid}"
                     ></i>
                     ${tweet.likes}
                 </span>
                 <span class="tweet-detail">
-                    <i class="fa-solid fa-retweet"
+                    <i class="fa-solid fa-retweet ${retweetIconClass}"
                     data-retweet="${tweet.uuid}"
                     ></i>
                     ${tweet.retweets}
