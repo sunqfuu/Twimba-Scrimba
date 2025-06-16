@@ -1,6 +1,5 @@
 import { tweetsData } from "./data.js";
 import { v4 as uuidv4 } from "https://jspm.dev/uuid";
-const tweetInput = document.getElementById("tweet-input");
 
 document.addEventListener("click", function (e) {
   if (e.target.dataset.like) {
@@ -47,19 +46,22 @@ function handleReplyClick(replyId) {
 }
 
 function handleTweetBtnClick() {
-  tweetsData.unshift({
-    handle: `@sunqfu`,
-    profilePic: `images/sunqfu.png`,
-    tweetText: tweetInput.value,
-    uuid: uuidv4(),
-    replies: [],
-    likes: 0,
-    retweets: 0,
-    isLiked: false,
-    isRetweeted: false,
-  });
-  render();
-  tweetInput.value = "";
+  const tweetInput = document.getElementById("tweet-input");
+  if (tweetInput.value) {
+    tweetsData.unshift({
+      handle: `@sunqfu`,
+      profilePic: `images/sunqfu.png`,
+      likes: 0,
+      retweets: 0,
+      tweetText: tweetInput.value,
+      replies: [],
+      isLiked: false,
+      isRetweeted: false,
+      uuid: uuidv4(),
+    });
+    render();
+    tweetInput.value = "";
+  }
 }
 
 function getFeedHtml() {
