@@ -1,7 +1,7 @@
 
 export const tweetsData = [   
     {
-        handle: `@TrollBot66756542 💎`,
+        handle: `@SabrinaCoinparter 💎`,
         profilePic: `images/troll.jpg`,
         likes: 27,
         retweets: 10,
@@ -35,8 +35,8 @@ export const tweetsData = [
         uuid: '3c23454ee-c0f5-9g9g-9c4b-77835tgs2',
     },
         {
-        handle: `@NoobCoder12`,
-        profilePic: `images/flower.png`,
+        handle: `@VibeCoder`,
+        profilePic: `images/vibecoder.png`,
         likes: 10,
         retweets: 3,
         tweetText: `Are you a coder if you only know HTML?`,
