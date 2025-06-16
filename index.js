@@ -57,14 +57,10 @@ function getFeedHtml() {
       retweetIconClass = "retweeted";
     }
 
-    /*
-Challenge:
-1. Use an if statement to set the value of 
-   'likeIconClass' to the string 'liked' 
-   if the tweet has been liked. 
-2. In the like icon tag, add 'likeIconClass' 
-   to the list of classes.
-*/
+    if (tweet.replies.length > 0) {
+      console.log(tweet.replies);
+    }
+
     feedHtml += `
 <div class="tweet">
     <div class="tweet-inner">
